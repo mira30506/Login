@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="@dimen/dp30"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="80dp"
+        android:backgroundTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/img_error"
+                android:src="@drawable/error"
+                android:layout_marginTop="50dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_width="150dp"
+                android:layout_height="200dp"/>
+
+
+            <TextView
+                android:id="@+id/txt_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp30"
+                android:layout_marginTop="@dimen/dp50"
+                android:layout_marginRight="@dimen/dp30"
+                android:text="@string/error_message"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp14"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_error" />
+
+            <TextView
+                android:id="@+id/error_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp30"
+                android:layout_marginRight="@dimen/dp30"
+                android:text="@string/code"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp14"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/btnAccept"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_message" />
+            <Button
+                android:id="@+id/btnAccept"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp56"
+                android:layout_marginLeft="@dimen/dp28"
+                android:layout_marginRight="@dimen/dp28"
+                android:layout_marginBottom="@dimen/dp30"
+                android:backgroundTint="@color/green"
+                android:text="@string/accept"
+                android:textSize="@dimen/sp18"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
